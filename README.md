@@ -1,20 +1,22 @@
 # mkedit
-mkedit is dead simple content editable plugin which turns specified element(s) editbale and provides callbacks
+mkedit is jQuery plugin which makes specified element(s) editable and provides callbacks.
+
+Just click on the element you want to edit, make chages and click save.
+Yeah! It's that simple.
 
 # Usage
-Basic usage is the same as every jquery plugin.
-
-We need to have an element with ```mke-id``` attribute, this should be unique value. Mkedit uses it as uniquie reference to the element.
+Basic usage is the same as with every jQuery plugin.
+We need to have an element with ```mke-id``` attribute, this should be unique value. mkedit uses it as unique reference to the element.
 ```
 <span class="editable" mke-id="1">
 ```
 
-Attatch the plugin to the element and let it do its small magic:
+Attach the plugin to the element and let it do its small magic:
 ```
 $('.editable').mkedit('attach', options);
 ```
 
-If you want to listen to keypress on that element you can add ```listen```:
+If you want to listen for keypress on that element you can add ```listen```:
 ```
 $('.editable').mkedit('listen', options);
 ```
@@ -29,19 +31,19 @@ var options = {
         return newValue
         },
     onsave: function(el, id, newValue, tmp){
-        // default callback before hiding the controll elements (save/close buttons)
-        // returns the element, id(mke-id attribude value), new value, old value
+        // default callback before hiding the control elements (save/close)
+        // returns the element, id(mke-id attribute value), new value, old value
         // default callback is empty
         },
     oncancel: function(el, id, tmp){
-        // default callback before hiding the controll elements (save/close)
-        // returns the element, id(mke-id attribude value), old value
+        // default callback before hiding the control elements (save/close)
+        // returns the element, id(mke-id attribute value), old value
         // default callback is empty
         },
     onkeyprees: function(el, id, key, e){
-        // default callback before hiding the controll elements (save/close buttons)
-        // returns the element, id(mke-id attribude value), pressed key id (ie. ENTER = 17), event object
-        // default callback checkt just for ENTER key and then clicks on save
+        // default callback before hiding the control elements (save/close)
+        // returns the element, id(mke-id attribute value), pressed key id (ie. ENTER = 17), event object
+        // default callback just checks for ENTER key and then clicks on save
         },
     savebutton: 'SAVE', // could be anything
     saveclass: '.save', // could be any class
