@@ -55,3 +55,6 @@ var options = {
 
 For key reference see this great post: [javascript keymap keycodes in json](http://www.lsauer.com/2011/08/javascript-keymap-keycodes-in-json.html)
 
+# Licence
+Published under the MIT licence.
+Copyright by Filip Vincůrek

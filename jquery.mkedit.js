@@ -82,7 +82,7 @@
 				      $('.'+defaults.cancelclass+'[mke-id='+id+']').remove();
 				      el.attr('contentEditable', false);
 				      el.removeClass('active');
-				      el.html(defaults.parsevalue(el.text()));
+				      el.text(defaults.parsevalue(el.text()));
 		        });
 		        $('.'+defaults.cancelclass+'[mke-id='+id+']').click(function(){
 				    	// call the callabck function (default or user defined)
@@ -92,7 +92,7 @@
 				      $('.'+defaults.cancelclass+'[mke-id='+id+']').remove();
 				      el.attr('contentEditable', false);
 				      el.removeClass('active');
-				      el.html(tmp);
+				      el.text(tmp);
 		        });
 		      }
 		    });
